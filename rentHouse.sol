@@ -11,7 +11,7 @@ contract RentHouse {
         uint price;
         uint rooms;
         //入住时间
-        string time；
+        string time;
     }
 
     House[] public houses;

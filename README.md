@@ -1,1 +1,2 @@
 # SmartContract_RentHouse
+这是一个去中心化租房平台的智能合约实现部分，目前基于以太坊开发，用Solidity编写，还有一些JavaScript前端处理的部分。
