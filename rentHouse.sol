@@ -8,10 +8,11 @@ contract RentHouse {
     
     struct House {
         string location;
+        string time;
         uint price;
         uint rooms;
         //入住时间
-        string time;
+        address owner;
     }
 
     House[] public houses;
@@ -22,11 +23,13 @@ contract RentHouse {
 
     function inputHouse(string _location, uint _price, uint _rooms, string _time) public {
         
-        id = houses.push(House(_location, _price， _rooms, _time)) - 1;
+        id = houses.push(House(_location, _price, _rooms, _time, msg.sender)) - 1;
         houseToOwner[id] = msg.sender;
         ownerHouseCount++;
         NewHouse(id, _price, _rooms);
     }
+
+
 
 
 
